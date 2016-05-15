@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+  <name>SJ Ultimate Gallery</name>
+  <author>ExtensionSpot</author>
+  <creationDate>18.11.2014</creationDate>
+  <copyright>All rights reserved by ExtensionSpot 2011-2012.</copyright>
+  <license>GPL 2.0</license>
+  <authorEmail>support@extensionspot.net</authorEmail>
+  <authorUrl>www.extensionspot.net</authorUrl>
+  <version>1.2.0</version>
+  <description>MOD_SJ_ULTIMATE_XML_DESCRIPTION</description>
+  <files>
+    <filename module="mod_sj_ultimate_gallery">mod_sj_ultimate_gallery.php</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+    <folder>tmpl</folder>
+    <folder>source</folder>
+    <folder>js</folder>
+    <folder>img</folder>
+    <folder>fields</folder>
+    </files>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_sj_ultimate_gallery.ini</language>
+	<language tag="en-GB">en-GB/en-GB.mod_sj_ultimate_gallery.sys.ini</language>
+  </languages>
+  <config >
+    <fields name="params" addfieldpath="/modules/mod_sj_ultimate_gallery/fields/">
+<fieldset name="basic">
+</fieldset>
+<fieldset name="generalsetup" label="General Setup">
+
+<field name="spacer1" type="spacer" default="" description="" label="&lt;p style=&quot;color: #ffffff; background-color: #FF0000;width:474px;text-align:center;&quot;&gt;&lt;strong&gt;General settings&lt;/strong&gt;&lt;/p&gt;" />
+
+ <field name="layout" type="radio" default="thumbs" label="Layout" description="Select the css layout suitable for your template">
+  <option value="thumbs">Thumbs</option>
+  <option value="grid">Grid</option>
+  <option value="list">List</option>
+</field>
+
+
+<field  name="vert_space_sjultimate" type="text" default="5" label="Vertical Space" description=""  />
+<field  name="horiz_space_sjultimate" type="text" default="5" label="Horizontal Space" description=""  />
+<field  name="thumb_width_sjultimate" type="text" default="126" label="Thumbnail Width" description=""  />
+<field name="thumb_height_sjultimate" type="text" default="126" label="Thumbnail Height" description="" />
+<field name="proportion_sjultimate" type="list" default="cover" label="Thumb scaling" description="">
+          <option value="cover" selected="selected" >Stretch</option>
+          <option value="contain">Center</option>
+       </field>
+
+
+
+<field name="spacer2" type="spacer" default="" description="" label="&lt;p style=&quot;color: #ffffff; background-color: #FF0000;width:474px;text-align:center;&quot;&gt;&lt;strong&gt;Grid Layout options&lt;/strong&gt;&lt;/p&gt;" />	
+
+<field  name="grid_width" type="text" default="150" label="Grid item with" description=""  />
+<field  name="grid_height" type="text" default="280" label="Grid item height" description=""  />
+<field  name="grid_img_height" type="text" default="200" label="Grid image height" description=""  />
+<field name="grid_c_bg_color" type="color" default="#000" label="Grid caption background" description="" />
+
+
+<field name="spacer3" type="spacer" default="" description="" label="&lt;p style=&quot;color: #ffffff; background-color: #FF0000;width:474px;text-align:center;&quot;&gt;&lt;strong&gt;List Layout options&lt;/strong&gt;&lt;/p&gt;" />
+
+<field name="img_align_list" type="list" default="left" label="Thumb align" description="" >
+          <option value="left">left</option>
+          <option value="right">right</option>
+        </field>
+
+<field name="spacer4" type="spacer" default="" description="" label="&lt;p style=&quot;color: #ffffff; background-color: #FF0000;width:474px;text-align:center;&quot;&gt;&lt;strong&gt;Descriptions settings&lt;/strong&gt;&lt;/p&gt;" />
+
+	<field name="descsize_sjultimate" type="text" default="10" label="Description font size" description="Adjust how big your description should be" />
+	<field name="descweight_sjultimate" type="list" default="none" label="Description font weight" description="" >
+          <option value="normal">Normal</option>
+          <option value="bold">Bold</option>
+        </field>
+    <field name="desccolor_sjultimate" type="color" default="#ccc" label="Description text color" description="The color of the description text" />
+	<field name="descalign_sjultimate" type="list" default="left" label="Description align" description="Choose where your description will be positioned " >
+          <option value="center">Center</option>
+          <option value="right">Right</option>
+          <option value="left">Left</option>
+        </field>
+		
+	<field name="titledescsize_sjultimate" type="text" default="12" label="Title font size" description="Adjust how big your description should be" />
+	<field name="titledescweight_sjultimate" type="list" default="bold" label="Title font weight" description="" >
+          <option value="normal">Normal</option>
+          <option value="bold">Bold</option>
+        </field>
+    <field name="titledesccolor_sjultimate" type="color" default="#369EAD" label="Title text color" description="The color of the description text" />
+	<field name="titledescalign_sjultimate" type="list" default="left" label="Title align" description="Choose where your description will be positioned " >
+          <option value="center">Center</option>
+          <option value="right">Right</option>
+          <option value="left">Left</option>
+        </field>
+	
+
+<field name="spacer5" type="spacer" default="" description="" label="&lt;p style=&quot;color: #ffffff; background-color: #FF0000;width:474px;text-align:center;&quot;&gt;&lt;strong&gt;Borders&lt;/strong&gt;&lt;/p&gt;" />
+	
+	<field name="topborder_sjultimate" type="text" default="4" label="Thumb top border" description="The thickness of the top border" />
+	<field name="rightborder_sjultimate" type="text" default="4" label="Thumb right border" description="The thickness of the right border" />
+	<field name="bottomborder_sjultimate" type="text" default="4" label="Thumb bottom border" description="The thickness of the bottom border" />
+	<field name="leftborder_sjultimate" type="text" default="4" label="Thumb left border " description="The thickness of the left border" />
+
+	<field name="borderradius_sjultimate" type="text" default="0" label="Border radius " description="" />
+	<field name="bordercolor_sjultimate" type="color" default="#000" label="Thumbs border color" description="Choose your gallery thumbs margin color " />
+	<field name="bordercolorhoover_sjultimate" type="color" default="#000" label="Thumbs border hover" description="Choose your gallery thumbs margin color hoover effect" />
+	
+	<field name="borderstyle_sjultimate" type="list" default="solid" label="Border style" description="" >
+          <option value="none">none</option>
+          <option value="dotted">dotted</option>
+          <option value="dashed">dashed</option>
+          <option value="solid">solid</option>
+          <option value="double">double</option>
+          <option value="groove">groove</option>
+          <option value="ridge">ridge</option>
+          <option value="inset">inset</option>
+          <option value="outset">outset</option>
+        </field>
+<field name="borderstyle_sjultimate_hover" type="list" default="solid" label="Border style hover" description="" >
+          <option value="none">none</option>
+          <option value="dotted">dotted</option>
+          <option value="dashed">dashed</option>
+          <option value="solid">solid</option>
+          <option value="double">double</option>
+          <option value="groove">groove</option>
+          <option value="ridge">ridge</option>
+          <option value="inset">inset</option>
+          <option value="outset">outset</option>
+        </field>
+		
+</fieldset>
+<fieldset name="itemsetup" label="Item Setup">
+
+
+<field name="create_setup_ultimate" type="sjaddrow"  default="" label="" description="" />
+
+</fieldset>		
+	    
+    </fields>
+  </config>
+</extension>

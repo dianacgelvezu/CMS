@@ -1,0 +1,1 @@
+var sjulti = jQuery.noConflict();
