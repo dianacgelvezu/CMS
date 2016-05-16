@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>My Apple Style Counter</name>
+    <author>Nima Nouri</author>
+    <authorUrl>http://gpiutmd.iut.ac.ir</authorUrl>
+    <creationDate>2015-10-15</creationDate>
+    <copyright>Copyright (c)2010-2015 by Nima Nouri</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0-standalone.html</license>
+    <version>1.8.1</version>
+    <description>
+	<![CDATA[
+    <h3>My Apple Style counter module is a Java script based visitor counter.</h3>
+	Counter is written by <strong><a href="http://cnanney.com/journal/code/apple-style-counter">Chris Nanney</a></strong> 
+	and edited to become visitor counter for Joomla by <strong><a href="http://gpiutmd.iut.ac.ir"> Nima Nouri</a></strong> .
+    ]]>
+	</description>
+    <files>
+	    <filename>mod_myapplestylecounter.xml</filename>
+        <filename module="mod_myapplestylecounter">mod_myapplestylecounter.php</filename>
+        <filename>index.html</filename>
+        <filename>README.txt</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/assets/comma.png</filename>
+        <filename>tmpl/assets/filmstrip.png</filename>
+		<filename>tmpl/assets/counterstylesheet.css</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="startnum"
+                    type="text"
+                    default="0"
+                    label="Start Number"
+                    description="The counter will start to count from this number."/>
+                <field
+                    name="interval"
+                    type="hidden"
+                    default="1000000"
+                    label="Interval"
+                    description="This number is used to control the speed of counter animation."/>
+                <field
+                    name="increment"
+                    type="hidden"
+                    default="1"
+                    label="Increment"
+                    description="The number is used to increment the number by this value for each hit. (visit count = increment * hits)"/>
+            </fieldset>
+        </fields>
+    </config>
+	<updateservers>
+        <server type="extension" name="My Apple Style Counter Module" priority="1">http://gpiutmd.iut.ac.ir/Softwares/mod_myapplestylecounter_update.xml</server>
+    </updateservers>
+</extension>

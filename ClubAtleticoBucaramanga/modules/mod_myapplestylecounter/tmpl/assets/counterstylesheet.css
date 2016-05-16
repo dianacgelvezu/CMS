@@ -1,0 +1,30 @@
+#counterwrap{
+	margin: 0px auto;
+	text-align: center;
+	}
+#countercontainer  > div{
+	display: inline-block;
+	}
+	
+#countercontainer{
+	display: inline-block;
+	margin: 0px auto;
+	text-align: center;
+	}
+	
+.counterdigit{
+	background:url(filmstrip.png) 0px 0px no-repeat;
+	width:27px;
+	height:52px;
+	}
+	
+.counterseperator{
+	background:url(comma.png) 0px 35px no-repeat;
+	width:8px;
+	height:52px
+	}
+	
+#countercopyright{
+	text-align: center;
+	font-size: 12px !important;
+	}
